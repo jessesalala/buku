@@ -1,0 +1,78 @@
+/* DiscussionForum.css */
+
+.message {
+  padding: 12px 18px; /* No bottom padding needed now */
+  border-radius: 18px;
+  max-width: 75%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  line-height: 1.4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 50px;
+  margin-bottom: 25px; /* Space for time + ticks outside */
+}
+
+.message.sent {
+  background: #d1e7ff;
+  color: #0d3b85;
+  align-self: flex-end;
+  margin-right: 80px; /* Space for time and ticks outside */
+}
+
+.message.received {
+  background: #e9ecef;
+  color: #495057;
+  align-self: flex-start;
+  margin-right: 80px; /* Keep space consistent on right */
+}
+
+.message-user {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #333;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.message-content {
+  white-space: pre-wrap;
+  flex-grow: 1;
+  text-align: left;
+}
+
+/* Container for time and ticks outside the bubble */
+.message-meta {
+  position: absolute;
+  bottom: -20px;  /* Just below the bubble */
+  right: 0;       /* Align right edge with message */
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: #6c757d;
+  white-space: nowrap;
+}
+
+/* Style for ticks */
+.message-ticks {
+  font-size: 0.75rem;
+  color: #6c757d;
+}
+
+.message-ticks.sending {
+  color: orange;
+}
+
+.message-ticks.sent {
+  color: #0d6efd;
+}
+
+.message-ticks.delivered {
+  color: #198754;
+}

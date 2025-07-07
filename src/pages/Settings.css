@@ -1,0 +1,381 @@
+/* Base Styles */
+.auth-app-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F7FAFC;
+  padding: 20px;
+}
+
+.auth-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  padding: 30px;
+  overflow: hidden;
+}
+
+/* Header */
+.auth-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.app-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  background: white;
+  color: rgb(7, 120, 31);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0 auto 15px;
+}
+
+.auth-header h1 {
+  font-size: 1.5rem;
+  color: #2D3748;
+  margin-bottom: 10px;
+}
+
+/* Tabs */
+.form-tabs {
+  display: flex;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 25px;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 12px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: #2D3748;
+}
+
+.tab.active {
+  color: #6C63FF;
+  border-bottom: 3px solid #6C63FF;
+}
+
+/* Form Elements */
+.input-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6C63FF;
+}
+
+input {
+  width: 100%;
+  padding: 15px 15px 15px 45px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+input:focus {
+  border-color: #6C63FF;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2);
+}
+
+.auth-button {
+  width: 100%;
+  padding: 15px;
+  background: #6C63FF;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 10px;
+}
+
+.auth-button:hover {
+  background: #5a52e0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(108, 99, 255, 0.2);
+}
+
+.auth-button:disabled {
+  opacity: 0.7;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Method Toggle */
+.method-toggle {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.method-button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #f0f0f0;
+  color: #2D3748;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.method-button.active {
+  background: #6C63FF;
+  color: white;
+}
+
+/* OTP Actions */
+.otp-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.resend-button {
+  background: none;
+  border: none;
+  color: #6C63FF;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: #6C63FF;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Messages */
+.message {
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin: 15px 0;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.error {
+  background: rgba(245, 101, 101, 0.1);
+  color: #F56565;
+}
+
+.success {
+  background: rgba(72, 187, 120, 0.1);
+  color: #48BB78;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .auth-card {
+    padding: 40px;
+  }
+
+  .app-logo {
+    width: 80px;
+    height: 80px;
+    font-size: 32px;
+  }
+
+  .auth-header h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 25px;
+  }
+
+  .auth-header h1 {
+    font-size: 1.3rem;
+  }
+
+  input, .auth-button {
+    padding: 12px 12px 12px 40px;
+  }
+}/* Add these new styles to your existing Settings.css */
+
+/* Icon Positioning */
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.with-icon {
+  padding-left: 45px !important; /* Space for icon */
+  padding-right: 15px;
+}
+
+.input-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6C63FF;
+  pointer-events: none; /* Makes the icon non-interactive */
+  z-index: 2; /* Ensures icon stays above input */
+}
+
+/* Adjust input focus states to account for icons */
+input:focus {
+  border-color: #6C63FF;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2);
+  padding-left: 45px !important; /* Maintain space when focused */
+}
+
+/* Specific adjustments for OTP field */
+input[name="otp"] {
+  letter-spacing: 5px; /* Better OTP visual separation */
+  font-size: 18px; /* Larger OTP digits */
+}
+
+/* Ensure icons don't overlap on small screens */
+@media (max-width: 480px) {
+  .with-icon {
+    padding-left: 40px !important;
+  }
+  
+  .input-icon {
+    left: 12px;
+    font-size: 14px;
+  }
+}
+/* Registration Form Specific Styles */
+.registration-form {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.with-icon {
+  width: 100%;
+  padding: 1rem 1rem 1rem 3.5rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.with-icon:focus {
+  border-color: #6C63FF;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2);
+}
+
+.input-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6C63FF;
+  font-size: 1.2rem;
+  pointer-events: none;
+}
+
+.auth-button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #6C63FF;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.auth-button:hover {
+  background-color: #5a52e0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(108, 99, 255, 0.2);
+}
+
+.auth-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Password field specific */
+input[type="password"] {
+  letter-spacing: 0.1rem;
+}
+
+/* Loading spinner */
+.spinner {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+  margin-right: 0.5rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .with-icon {
+    padding: 0.8rem 0.8rem 0.8rem 3rem;
+    font-size: 0.9rem;
+  }
+  
+  .input-icon {
+    left: 0.8rem;
+    font-size: 1rem;
+  }
+  
+  .auth-button {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,978 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+/* Mobile styles (default) */
+.mobile-nav {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  background: #2c3e50;
+}
+
+/* Desktop override */
+@media (min-width: 768px) {
+  .mobile-nav { display: none; }
+  .desktop-nav { display: block; }
+  
+  .app-content {
+    margin-left: 250px; /* sidebar width */
+  }
+}/* Example for Home.js */
+.home-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+  
+}
+
+.card {
+  padding: 20px;
+  border-radius: 10px;
+  background: #b0e29c;
+  text-decoration: none;
+  color: #370f0f;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.page {
+  padding: 20px;
+  padding-bottom: 70px; /* Space for navbar */
+  min-height: 100vh;
+}
+
+.workbook-sections, 
+.calculator-grid {
+  display: grid;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.section, .calc-card {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.settings-options {
+  margin-top: 20px;
+}
+
+.option {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 60px; /* Space for navbar */
+}
+
+/* App Layout */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Page Specific Styles */
+.page-title {
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.feature-card {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Calculator Styles */
+.calculator-grid {
+  display: grid;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.calc-card {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+}
+/* Login Page Styles */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.login-container h1 {
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+.login-step {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 8px 15px;
+}
+
+.input-icon {
+  margin-right: 10px;
+  color: #7f8c8d;
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 16px;
+}
+
+.login-step button {
+  padding: 12px;
+  background: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-step button:hover {
+  background: #1a252f;
+}
+.test-note {
+  color: #777;
+  font-size: 0.8rem;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.login-container {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.input-icon {
+  margin-right: 0.5rem;
+  color: #666;
+}
+/* Workbook Form Styling */
+.workbook-container {
+  font-family: 'Arial', sans-serif;
+  max-width: 100%;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+/* Card Styling */
+.form-section {
+  background: white;
+  padding: 25px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e9ecef;
+}
+
+/* Beautiful Textareas */
+textarea {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  background-color: #f8f9fa;
+  min-height: 120px;
+  resize: vertical;
+}
+
+textarea:focus {
+  border-color: #4dabf7;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(77, 171, 247, 0.2);
+  background-color: white;
+}
+
+/* Enhanced Input Fields */
+input[type="text"],
+input[type="tel"],
+input[type="number"],
+input[type="date"] {
+  padding: 12px 15px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus {
+  border-color: #4dabf7;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(77, 171, 247, 0.2);
+}
+
+/* Beautiful Cards */
+.method-column {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.method-column:hover {
+  transform: translateY(-3px);
+}
+
+.method-column h4 {
+  color: #495057;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+/* Table Styling */
+.weekly-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 20px 0;
+}
+
+.weekly-table th {
+  background-color: #f1f3f5;
+  padding: 12px;
+  text-align: center;
+  border: none;
+}
+
+.weekly-table td {
+  padding: 12px;
+  border: none;
+  border-bottom: 1px solid #e9ecef;
+  text-align: center;
+}
+
+.weekly-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Signature Fields */
+.signature-field input {
+  border: none;
+  border-bottom: 2px solid #495057;
+  border-radius: 0;
+  padding: 5px 0;
+  background: transparent;
+}
+
+/* Submit Button */
+.submit-button {
+  background: #4dabf7;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.submit-button:hover {
+  background: #339af0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Quote Section */
+.quote-section {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid #4dabf7;
+  margin: 30px 0;
+}
+
+.website-link {
+  color: #4dabf7;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form-section {
+    padding: 20px;
+  }
+  
+  textarea {
+    min-height: 100px;
+  }
+}
+/* SETTINGS PAGE STYLING */
+.settings-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.settings-header {
+  color: #2c3e50;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.settings-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.settings-section h2 {
+  color: #495057;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #495057;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #4dabf7;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(77, 171, 247, 0.2);
+}
+
+/* Toggle Switches */
+.toggle-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.toggle-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #4dabf7;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Color Options */
+.color-options {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.color-option {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.3s;
+}
+
+.color-option.active {
+  border-color: #495057;
+  transform: scale(1.1);
+}
+
+/* Buttons */
+.password-change-btn {
+  background: #f8f9fa;
+  color: #495057;
+  border: 1px solid #dee2e6;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s;
+}
+
+.password-change-btn:hover {
+  background: #e9ecef;
+}
+
+.save-settings-btn {
+  background: #4dabf7;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px auto;
+  transition: all 0.3s;
+}
+
+.save-settings-btn:hover {
+  background: #339af0;
+  transform: translateY(-2px);
+}
+/* Add these to your existing index.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Card hover effect */
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+/* Responsive grid */
+.responsive-grid {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.responsive-grid > * {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Basic card style */
+.basic-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+}
+/* Family Component Styles */
+.family-container {
+  padding: 20px;
+}
+
+.family-grid {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.family-card {
+  border: 1px solid #69b02b;
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.family-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #2c7be5;
+  font-weight: 500;
+}
+/* Learning Component Styles */
+.learning-container {
+  padding: 20px;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.course-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.course-icon {
+  font-size: 24px;
+  color: #2c7be5;
+}
+
+.course-title {
+  margin: 15px 0 10px;
+}
+
+.course-description {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.start-learning-btn {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: #2c7be5;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
+}
+/* Content Delivery Styles */
+.content-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.content-selector {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.content-selector button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background: #f0f0f0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.content-selector button.active {
+  background: #2c7be5;
+  color: white;
+}
+
+.content-display {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+audio, video {
+  width: 100%;
+  margin-top: 15px;
+}
+.days-alive-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+.days-result {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2c7be5;
+  margin: 0.5rem 0;
+}
+
+/* src/features/notifications/NotificationCenter.css */
+.notification-center {
+  position: relative;
+}
+
+.notification-bell {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  position: relative;
+  color: #333;
+}
+
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #e74c3c;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notification-dropdown {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  width: 350px;
+  max-height: 500px;
+  overflow-y: auto;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border-radius: 8px;
+  z-index: 1000;
+}
+
+.notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.notification-list {
+  padding: 0.5rem;
+}
+
+.notification-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.notification-item.unread {
+  background-color: #f8f9fa;
+}
+
+.notification-icon {
+  font-size: 1.25rem;
+  color: #2c7be5;
+}
+
+.notification-content {
+  flex: 1;
+}
+
+.notification-content p {
+  margin: 0;
+}
+
+.notification-content small {
+  color: #666;
+  font-size: 0.75rem;
+}
+
+.mark-read-btn {
+  background: none;
+  border: none;
+  color: #2c7be5;
+  cursor: pointer;
+  font-size: 0.75rem;
+  align-self: center;
+}
+
+.empty-notifications {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+}
+/* Adult Books */
+.book-reader {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.reader-controls {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.page-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Children Books */
+.children-reader {
+  background-color: #f9f9f9;
+  padding: 20px;
+  min-height: 80vh;
+}
+
+.interactive-page {
+  text-align: center;
+}
+
+.interactive-page img {
+  max-height: 50vh;
+  margin-bottom: 20px;
+}
+
+.interactive-controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Parent Dashboard */
+.child-card {
+  background: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+/* Bookmark Manager Styles */
+.bookmark-manager {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.bookmark-list {
+  list-style: none;
+  padding: 0;
+}
+
+.bookmark-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 10px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.bookmark-content h3 {
+  margin: 0 0 5px 0;
+  color: #2c7be5;
+}
+
+.bookmark-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.icon-button:hover {
+  color: #2c7be5;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-style: italic;
+}
+.time-assessment {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.input-group input {
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+button {
+  padding: 0.75rem;
+  background-color: #2c7be5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.results {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 4px;
+}

@@ -1,0 +1,112 @@
+.time-report-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Card ya Bluu yenye Muundo wa Screenshot */
+.header-card {
+  background: linear-gradient(90deg, #0d6efd, #0a58ca);
+  color: white;
+  padding: 35px 20px;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header-icon {
+  margin-bottom: 15px;
+}
+
+.header-card h1 {
+  margin: 10px 0 5px;
+}
+
+.header-card p {
+  margin: 0;
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
+
+/* Inputs za Tarehe */
+.input-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.date-card {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  min-width: 280px;
+  flex: 1;
+}
+
+.date-card label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+.date-card input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* Button */
+.calculate-btn {
+  background: #0d6efd;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.calculate-btn:hover {
+  background: #0a58ca;
+}
+
+/* Matokeo Section */
+.results-section {
+  margin-top: 25px;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.metrics-grid div {
+  background: #f1f3f5;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.period-list {
+  list-style: none;
+  padding: 0;
+}
+
+.period-list li {
+  background: #e9f5ff;
+  padding: 12px 18px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  color: #0d6efd;
+  font-weight: 500;
+}

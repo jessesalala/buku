@@ -1,0 +1,67 @@
+/* BASE STYLES */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* NAVIGATION */
+.top-nav {
+  background: #2c3e50;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar {
+  width: 200px;
+  background: #34495e;
+  color: white;
+  padding: 1rem;
+}
+
+/* AUTH FORMS */
+.auth-form {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.auth-form input {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+.auth-form button {
+  background: #2c3e50;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  margin-bottom: 1rem;
+}
+
+/* DASHBOARDS */
+.main-content {
+  flex: 1;
+  padding: 1rem;
+}
+
+.dashboard {
+  padding: 1rem;
+}

@@ -1,0 +1,58 @@
+{
+  "name": "nguvu-ya-buku",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://buku.utajiri.tz",
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@firebase/auth": "^1.10.7",
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@mui/material": "^7.2.0",
+    "@react-pdf/renderer": "^4.3.0",
+    "axios": "^1.10.0",
+    "bootstrap": "^5.3.7",
+    "cra-template-pwa": "2.0.0",
+    "date-fns": "^2.30.0",
+    "epubjs": "^0.3.93",
+    "firebase": "^11.9.1",
+    "pdfjs-dist": "^2.16.105",
+    "react": "18.2.0",
+    "react-bootstrap": "^2.10.10",
+    "react-dom": "18.2.0",
+    "react-firebase-hooks": "^5.1.1",
+    "react-icons": "^5.5.0",
+    "react-pdf": "^6.2.2",
+    "react-phone-number-input": "^3.4.12",
+    "react-router-dom": "^7.6.3",
+    "react-scripts": "5.0.1",
+    "react-web-share": "^2.0.2",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
